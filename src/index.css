@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-ink text-white font-body antialiased overflow-x-hidden; }
+h1, h2, h3 { @apply font-display uppercase tracking-wide; }
+
+.cut { clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%); }
+.btn { @apply cut inline-block bg-gold text-ink font-display uppercase tracking-widest px-7 py-3 transition hover:bg-white cursor-pointer; }
+.btn-ghost { @apply cut inline-block border border-white/40 font-display uppercase tracking-widest px-7 py-3 transition hover:border-gold hover:text-gold cursor-pointer; }
+.section { @apply max-w-7xl mx-auto px-5 md:px-10 py-20 md:py-28; }
+.title { @apply text-4xl md:text-6xl font-bold; }
+.title::after { content: ""; @apply block w-16 h-1 bg-gold mt-4; }
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: #F5B800; }
